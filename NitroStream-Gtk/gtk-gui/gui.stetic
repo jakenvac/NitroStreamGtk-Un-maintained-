@@ -27,15 +27,6 @@
         <property name="StockId">gtk-open</property>
         <signal name="Activated" handler="DefineViewrPath" />
       </action>
-      <action id="justifyFillAction">
-        <property name="Type">Toggle</property>
-        <property name="Label" translatable="yes">Show log</property>
-        <property name="ShortLabel" translatable="yes">Show log</property>
-        <property name="StockId">gtk-justify-fill</property>
-        <property name="DrawAsRadio">False</property>
-        <property name="Active">False</property>
-        <signal name="Toggled" handler="onShowLogToggled" />
-      </action>
       <action id="CreditsAction">
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Credits</property>
@@ -48,8 +39,6 @@
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
-    <signal name="Realized" handler="onWindowRealized" />
-    <signal name="Shown" handler="onWindowShown" />
     <child>
       <widget class="Gtk.VBox" id="vbox2">
         <property name="MemberName" />
@@ -61,7 +50,6 @@
             <node name="Menu" type="Menubar">
               <node type="Menu" action="ConfigAction">
                 <node type="Menuitem" action="openAction" />
-                <node type="Menuitem" action="justifyFillAction" />
               </node>
               <node type="Menu" action="AboutAction">
                 <node type="Menuitem" action="CreditsAction" />
@@ -519,7 +507,6 @@ Bottom</property>
           <widget class="Gtk.ScrolledWindow" id="logScroller">
             <property name="MemberName" />
             <property name="HeightRequest">200</property>
-            <property name="Visible">False</property>
             <property name="ShadowType">In</property>
             <property name="BorderWidth">6</property>
             <child>
@@ -539,14 +526,13 @@ Bottom</property>
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="button3">
+          <widget class="Gtk.Button" id="button1">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Connect</property>
             <property name="UseUnderline">True</property>
-            <property name="BorderWidth">3</property>
-            <signal name="Pressed" handler="ConnectButtonPressed" />
+            <signal name="Pressed" handler="onConnectButtonClicked" />
           </widget>
           <packing>
             <property name="PackType">End</property>

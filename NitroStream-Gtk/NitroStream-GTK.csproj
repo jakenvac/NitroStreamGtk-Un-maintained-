@@ -73,7 +73,7 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\..\NitroStream\Nitro Stream\Resources\icon.ico" />
+    <EmbeddedResource Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
@@ -89,12 +89,6 @@
   <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\libNitroStream\libNitroStream.csproj">
-      <Project>{DF2DEBD8-BFE9-4D73-A10A-835B9D0D41D9}</Project>
-      <Name>libNitroStream</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
@@ -105,4 +99,10 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\..\libNitroStream\libNitroStream\libNitroStream.csproj">
+      <Project>{DF2DEBD8-BFE9-4D73-A10A-835B9D0D41D9}</Project>
+      <Name>libNitroStream</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

@@ -12,8 +12,6 @@ namespace NitroStreamGtk.View
 		
 		private global::Gtk.Action openAction;
 		
-		private global::Gtk.ToggleAction justifyFillAction;
-		
 		private global::Gtk.Action CreditsAction;
 		
 		private global::Gtk.VBox vbox2;
@@ -72,7 +70,7 @@ namespace NitroStreamGtk.View
 		
 		private global::Gtk.TextView txtLog;
 		
-		private global::Gtk.Button button3;
+		private global::Gtk.Button button1;
 		
 		private global::Gtk.Button button2;
 
@@ -91,9 +89,6 @@ namespace NitroStreamGtk.View
 			this.openAction = new global::Gtk.Action ("openAction", global::Mono.Unix.Catalog.GetString ("Define NTRViewer path"), null, "gtk-open");
 			this.openAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Define NTRViewer path");
 			w1.Add (this.openAction, null);
-			this.justifyFillAction = new global::Gtk.ToggleAction ("justifyFillAction", global::Mono.Unix.Catalog.GetString ("Show log"), null, "gtk-justify-fill");
-			this.justifyFillAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Show log");
-			w1.Add (this.justifyFillAction, null);
 			this.CreditsAction = new global::Gtk.Action ("CreditsAction", global::Mono.Unix.Catalog.GetString ("Credits"), null, null);
 			this.CreditsAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Credits");
 			w1.Add (this.CreditsAction, null);
@@ -110,7 +105,7 @@ namespace NitroStreamGtk.View
 			this.vbox2.Name = "vbox2";
 			this.vbox2.Spacing = 6;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><menubar name='Menu'><menu name='ConfigAction' action='ConfigAction'><menuitem name='openAction' action='openAction'/><menuitem name='justifyFillAction' action='justifyFillAction'/></menu><menu name='AboutAction' action='AboutAction'><menuitem name='CreditsAction' action='CreditsAction'/></menu></menubar></ui>");
+			this.UIManager.AddUiFromString ("<ui><menubar name='Menu'><menu name='ConfigAction' action='ConfigAction'><menuitem name='openAction' action='openAction'/></menu><menu name='AboutAction' action='AboutAction'><menuitem name='CreditsAction' action='CreditsAction'/></menu></menubar></ui>");
 			this.Menu = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/Menu")));
 			this.Menu.Name = "Menu";
 			this.vbox2.Add (this.Menu);
@@ -395,14 +390,13 @@ namespace NitroStreamGtk.View
 			w27.PackType = ((global::Gtk.PackType)(1));
 			w27.Position = 4;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.button3 = new global::Gtk.Button ();
-			this.button3.CanFocus = true;
-			this.button3.Name = "button3";
-			this.button3.UseUnderline = true;
-			this.button3.BorderWidth = ((uint)(3));
-			this.button3.Label = global::Mono.Unix.Catalog.GetString ("Connect");
-			this.vbox2.Add (this.button3);
-			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.button3]));
+			this.button1 = new global::Gtk.Button ();
+			this.button1.CanFocus = true;
+			this.button1.Name = "button1";
+			this.button1.UseUnderline = true;
+			this.button1.Label = global::Mono.Unix.Catalog.GetString ("Connect");
+			this.vbox2.Add (this.button1);
+			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.button1]));
 			w28.PackType = ((global::Gtk.PackType)(1));
 			w28.Position = 5;
 			w28.Expand = false;
@@ -426,17 +420,13 @@ namespace NitroStreamGtk.View
 			}
 			this.DefaultWidth = 972;
 			this.DefaultHeight = 1004;
-			this.logScroller.Hide ();
 			this.Show ();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
-			this.Realized += new global::System.EventHandler (this.onWindowRealized);
-			this.Shown += new global::System.EventHandler (this.onWindowShown);
 			this.openAction.Activated += new global::System.EventHandler (this.DefineViewrPath);
-			this.justifyFillAction.Toggled += new global::System.EventHandler (this.onShowLogToggled);
 			this.btnUpdate.Pressed += new global::System.EventHandler (this.onUpdateButtonPress);
 			this.button10.Pressed += new global::System.EventHandler (this.onDonateClick);
 			this.button2.Pressed += new global::System.EventHandler (this.onSendMemoryPatch);
-			this.button3.Pressed += new global::System.EventHandler (this.ConnectButtonPressed);
+			this.button1.Pressed += new global::System.EventHandler (this.onConnectButtonClicked);
 		}
 	}
 }

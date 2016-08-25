@@ -5,6 +5,8 @@ Currently in an alpha phase. **should** match the Windows/WPF version for featur
 >Allows the user to easily initiate a connection to NTRViewer for NTR CFW on the Nintendo 3DS
 Built on the NTRDebugger by Cell99 - https://github.com/44670/NTRClient
 
+![NitroStream Gtk# Image](https://i.imgur.com/mCZFZdq.png)
+
 ## Dependencies
 You will need:
 * NTRViewer - which can be found in the starter pack here:

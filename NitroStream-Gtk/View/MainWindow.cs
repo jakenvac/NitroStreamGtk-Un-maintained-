@@ -24,7 +24,6 @@ namespace NitroStreamGtk.View
 		public MainWindow(object dc) : base (Gtk.WindowType.Toplevel)
 		{
 			DataContext = dc;
-//            Menu.
 			Build();
 		}
 
@@ -67,7 +66,7 @@ namespace NitroStreamGtk.View
 			}
 		}
 
-		protected void ConnectButtonPressed (object sender, EventArgs e)
+		protected void onConnectButtonClicked (object sender, EventArgs e)
 		{
 			ViewModel vm = this.DataContext as ViewModel;
 			if (vm != null) {
@@ -126,16 +125,6 @@ namespace NitroStreamGtk.View
 			base.OnShown ();
 		}
 
-		protected void onWindowRealized (object sender, EventArgs e)
-		{
-			CheckUpdate();
-		}
-
-		protected void onWindowShown (object sender, EventArgs e)
-		{
-			CheckUpdate();
-		}
-
         protected void onUpdateButtonPress(object sender, EventArgs e)
         {
             ViewModel vm = DataContext as ViewModel;
@@ -153,12 +142,6 @@ namespace NitroStreamGtk.View
                 vm.InitiateConnection(libNitroStream.ClientManager.ConnectionIntents.MemoryPatch);
             }
         }
-
-        protected void onShowLogToggled(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
 	}
 
 }
