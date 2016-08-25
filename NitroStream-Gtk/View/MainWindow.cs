@@ -142,6 +142,18 @@ namespace NitroStreamGtk.View
                 vm.InitiateConnection(libNitroStream.ClientManager.ConnectionIntents.MemoryPatch);
             }
         }
+        protected void creditsToLog(object sender, EventArgs e)
+        {
+            ViewModel vm = DataContext as ViewModel;
+            if (vm != null)
+            {           
+                vm.WriteToLog("Cell9 for all their NTR efforts.");
+                vm.WriteToLog("NekoMichi for the brilliant screen cap tutorial.");
+                vm.WriteToLog("Everyone who has contributed to NitroStream.");
+                vm.WriteToLog("The GBATemp thread.");
+                vm.WriteToLog("Everyone who has contributed to 3DS scene in general.");
+            }
+        }
 	}
 
 }

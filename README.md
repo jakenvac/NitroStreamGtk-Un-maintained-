@@ -16,6 +16,9 @@ https://github.com/44670/BootNTR/releases
 * ***Non Windows users:*** Even though NitroStream is native, you will need wine to launch NTRViewer
 and it will need to be the default program for launching exe files. I will look into executing NTRViewer with wine manually.
 
+## Download
+Go [here](https://github.com/JakeHL/NitroStreamGtk-/releases).
+
 ## Usage
 To use, either place the executable in the same directory as NTViewer.exe or set it's location before connecting in the options menu of the application.
 

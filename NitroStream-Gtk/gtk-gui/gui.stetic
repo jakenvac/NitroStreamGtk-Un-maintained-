@@ -31,6 +31,7 @@
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Credits</property>
         <property name="ShortLabel" translatable="yes">Credits</property>
+        <signal name="Activated" handler="creditsToLog" />
       </action>
     </action-group>
     <property name="MemberName" />

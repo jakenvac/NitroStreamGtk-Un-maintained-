@@ -423,6 +423,7 @@ namespace NitroStreamGtk.View
 			this.Show ();
 			this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 			this.openAction.Activated += new global::System.EventHandler (this.DefineViewrPath);
+			this.CreditsAction.Activated += new global::System.EventHandler (this.creditsToLog);
 			this.btnUpdate.Pressed += new global::System.EventHandler (this.onUpdateButtonPress);
 			this.button10.Pressed += new global::System.EventHandler (this.onDonateClick);
 			this.button2.Pressed += new global::System.EventHandler (this.onSendMemoryPatch);

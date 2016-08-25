@@ -10,7 +10,7 @@ namespace NitroStreamGtk
 
         // Getting the assembly version doesn't seem to work correctly in mono
             // If anyone knows a better way that this please issue a pull request with a fix!!
-		public static string Version { get { return "0.0.0.1"; } }
+		public static string Version { get { return "0.1.0.0"; } }
 
 		public View.MainWindow MainWindow { get; set; }
 		public ViewSettings ViewSettings { get; set; }
@@ -24,7 +24,7 @@ namespace NitroStreamGtk
 		public ViewModel ()
 		{
 			ViewSettings = ViewSettings.Load(_ConfigPath) ?? new ViewSettings();
-			Updater = new Updater("NitroStreamGtk","JakeHL","NitroStream", Version);
+			Updater = new Updater("NitroStreamGtk","JakeHL","NitroStreamGtk-", Version);
             _ClientManager = new ClientManager(ViewSettings);
             Logger.Logged += onLogRecieved;
             _LogText = new StringBuilder();
@@ -44,9 +44,14 @@ namespace NitroStreamGtk
             MainWindow.logText = _LogText.ToString();
         }
 
-        public void onLogRecieved(object sender, LogEventArgs e)
+        private void onLogRecieved(object sender, LogEventArgs e)
         {
-            _LogText.Append(e.Message + "\n");
+            WriteToLog(e.Message);
+        }
+
+        public void WriteToLog(string msg)
+        {
+            _LogText.Append(msg + "\n");
             MainWindow.logText = _LogText.ToString();
         }
 
