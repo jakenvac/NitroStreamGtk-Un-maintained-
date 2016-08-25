@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IPAddress>192.168.1.75</IPAddress>
+  <ShowLog>true</ShowLog>
+  <TopScale>1</TopScale>
+  <BottomScale>1</BottomScale>
+  <ViewMode>Vertical</ViewMode>
+  <PictureQuality>90</PictureQuality>
+  <PriorityFactor>5</PriorityFactor>
+  <QosValue>15</QosValue>
+  <PriorityMode>false</PriorityMode>
+  <ViewerPath>/home/jake/Downloads/NTR_3.4PREVIEW2_STARTER_KIT/NTRViewer/NTRViewer.exe</ViewerPath>
+</ViewSettings>
