@@ -89,15 +89,16 @@ namespace NitroStreamGtk.View
 					vs.PriorityFactor = pf;
 					vs.QosValue = qos;
 					vs.PictureQuality = pq;
+
+                    vm.ViewSettings = vs;
+                    vm.SaveViewSettings();
+                    vm.InitiateConnection(libNitroStream.ClientManager.ConnectionIntents.RemotePlay);
+
 				}
 				else
 				{
-					throw new Exception ("A field has an incorrect value.");
+                    vm.WriteToLog("One or more fields have incorrect values.");
 				}
-
-				vm.ViewSettings = vs;
-				vm.SaveViewSettings();
-                vm.InitiateConnection(libNitroStream.ClientManager.ConnectionIntents.RemotePlay);
 			}
 		}
 
@@ -152,6 +153,8 @@ namespace NitroStreamGtk.View
                 vm.WriteToLog("Everyone who has contributed to NitroStream.");
                 vm.WriteToLog("The GBATemp thread.");
                 vm.WriteToLog("Everyone who has contributed to 3DS scene in general.");
+                vm.WriteToLog("----");
+                vm.WriteToLog("A BIG BIG THANKYOU to Metalliguitare for all his time & effort spent debugging this app on Mac!!");
             }
         }
 	}

@@ -280,7 +280,7 @@ namespace NitroStreamGtk.View
 			// Container child vbox2.Gtk.Box+BoxChild
 			this.frame1 = new global::Gtk.Frame ();
 			this.frame1.Name = "frame1";
-			this.frame1.ShadowType = ((global::Gtk.ShadowType)(0));
+			this.frame1.ShadowType = ((global::Gtk.ShadowType)(1));
 			this.frame1.BorderWidth = ((uint)(6));
 			// Container child frame1.Gtk.Container+ContainerChild
 			this.GtkAlignment = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
@@ -394,6 +394,7 @@ namespace NitroStreamGtk.View
 			this.button1.CanFocus = true;
 			this.button1.Name = "button1";
 			this.button1.UseUnderline = true;
+			this.button1.BorderWidth = ((uint)(3));
 			this.button1.Label = global::Mono.Unix.Catalog.GetString ("Connect");
 			this.vbox2.Add (this.button1);
 			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.button1]));

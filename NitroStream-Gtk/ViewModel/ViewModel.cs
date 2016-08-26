@@ -10,7 +10,7 @@ namespace NitroStreamGtk
 
         // Getting the assembly version doesn't seem to work correctly in mono
             // If anyone knows a better way that this please issue a pull request with a fix!!
-		public static string Version { get { return "0.1.0.0"; } }
+		public static string Version { get { return "0.1.0.1"; } }
 
 		public View.MainWindow MainWindow { get; set; }
 		public ViewSettings ViewSettings { get; set; }
@@ -40,7 +40,7 @@ namespace NitroStreamGtk
         private void onUnhandledException (object sender, UnhandledExceptionEventArgs e)
         {
             Exception ex = (Exception)e.ExceptionObject;
-            _LogText.Append(ex.Message);
+            _LogText.Append(ex.ToString());
             MainWindow.logText = _LogText.ToString();
         }
 
