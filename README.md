@@ -1,6 +1,6 @@
-# Nitro Stream Gtk#
+# Nitro Stream Gtk# [Un-maintained]
 A Mono/Gtk# port of NitroStream.
-Currently in an alpha phase. **should** match the Windows/WPF version for features (If not in Asthetic)
+** NO LONGER DEVELOPED **
 
 >Allows the user to easily initiate a connection to NTRViewer for NTR CFW on the Nintendo 3DS
 Built on the NTRDebugger by Cell99 - https://github.com/44670/NTRClient
