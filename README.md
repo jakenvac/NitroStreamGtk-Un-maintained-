@@ -1,5 +1,5 @@
 # Nitro Stream Gtk# [Un-maintained]
-A Mono/Gtk# port of NitroStream.
+A Mono/Gtk# port of NitroStream.  
 ** NO LONGER DEVELOPED **
 
 >Allows the user to easily initiate a connection to NTRViewer for NTR CFW on the Nintendo 3DS
